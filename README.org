@@ -1,0 +1,30 @@
+#+TITLE: Org-Babel support for evaluating bean-query queries
+
+Refer to the Babel [[https://orgmode.org/manual/Working-with-Source-Code.html][documentation]] in the Org manual and to the
+dedicated [[https://orgmode.org/worg/org-contrib/babel/index.html][section]] on Worg for instructions on how to use this. There
+just a few bean-query specific aspects, listed below.
+
+** Header arguments
+
+The ~:colnames~ header argument defaults to ~yes~.
+
+There are a few bean-query specific headers arguments:
+
+- ~:db~ ::
+
+  The path to the Beancount ledger on which bean-query will
+  operate. This argument is required.
+
+- ~:errors~ ::
+
+  Setting this argument to ~no~ is equivalent to passing the
+  ~--no-errors~ command line option to the ~bean-query~ command.
+  
+- ~:numberify~ ::
+
+  Setting this argument to any value is equivalent to passing the
+  ~--numberify~ command line option to the ~bean-query~ command.
+
+** Sessions
+
+There is currently no support for sessions.
